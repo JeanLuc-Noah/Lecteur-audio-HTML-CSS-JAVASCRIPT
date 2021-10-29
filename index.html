@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>audio</title>
+	<link rel="stylesheet" type="text/css" href="fontawesome/css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+
+
+	<div class="main">
+		
+		<p id="logo"><i class="fas fa-circle-notch"></i>music</p>
+
+		<!------  Left ------------------>
+		<div class="left">
+			
+			<!------ Song image ----->
+			<img id="track_image">
+
+			<div class="volume" >
+				
+				<p id="volume_show">90</p>&nbsp;
+				<i class="fas fa-volume-up" id="icon_volume" onclick="mute_sound();"></i>
+
+				<input type="range" min="0" max="100" value="90" name="" onchange="volume_change()" id="volume">
+			</div>
+
+		</div>
+
+		<!------  Right----------->
+		<div class="right">
+
+			<div class="show_song_no">
+				<p id="present">1</p>
+				<p>/</p>
+				<p id="total">5</p>
+			</div>
+
+			<!------ song title ------>
+			<p id="title">title.mp3</p>
+			<p id="artist">Name artist </p>
+
+			<!----- middle part ---->
+			<div class="middle">
+				<button onclick="previous_song()" id="pres"><i class="fas fa-step-backward"></i></button>
+				<button onclick="justplay()" id="play"><i class="fas fa-play"></i></button>
+				<button onclick ="next_song()" id="next"><i class="fas fa-step-forward"></i> </button>
+			</div>
+
+
+			<!------ song duration ----->
+			<div class="duration">
+				<input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+			</div>
+			<button id="auto" onclick="autoplay_switch()">Auto play <i class="fas fa-circle-notch"></i></button>
+
+
+
+		</div>
+			
+	</div>
+
+
+
+
+	<!-------- scritp ------------------>
+	<script src="js/script.js"></script>
+</body>
+</html>
